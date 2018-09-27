@@ -16,3 +16,6 @@ class Ray:
 
     def translate(self, distance):
         self.height += np.tan(self.angle)*distance
+ 
+    def transmit(self, thickness, tilt):
+        self.height += np.sin(self.angle)*thickness/(np.cos(self.angle+tilt))
